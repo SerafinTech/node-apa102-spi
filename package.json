@@ -1,0 +1,29 @@
+{
+  "name": "node-apa102-spi",
+  "version": "0.0.1",
+  "description": "Raspberry Pi library to drive APA102 RGB led over SPI",
+  "main": "apa102-spi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerafinTech/node-apa102-spi.git"
+  },
+  "keywords": [
+    "rpi",
+    "apa102",
+    "spi",
+    "rgb",
+    "led"
+  ],
+  "author": "Jason Serafin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SerafinTech/node-apa102-spi/issues"
+  },
+  "homepage": "https://github.com/SerafinTech/node-apa102-spi#readme",
+  "dependencies": {
+    "rpio": "^0.9.16"
+  }
+}
