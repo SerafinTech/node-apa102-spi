@@ -9,7 +9,7 @@ npm install apa102-spi
 
 ### Usage
 ```js
-var Apa102spi = require('./apa102-spi')
+var Apa102spi = require('apa102-spi')
 
 // Apa102spi(number of leds, clock divider)
 var LedDriver = new Apa102spi(9, 100)
