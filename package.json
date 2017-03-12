@@ -1,5 +1,5 @@
 {
-  "name": "node-apa102-spi",
+  "name": "apa102-spi",
   "version": "0.0.1",
   "description": "Raspberry Pi library to drive APA102 RGB led over SPI",
   "main": "apa102-spi.js",
