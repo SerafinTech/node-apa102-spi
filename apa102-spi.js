@@ -9,6 +9,7 @@ function Apa102spi (stringLength, clockDivider) {
   this.bufferLength = stringLength * 4
   this.writeBuffer = Buffer.alloc(this.bufferLength, 'E0000000', 'hex')
   this.bufferLength += 8
+  this.writeBuffer = Buffer.concat([Buffer.alloc(4, '00000000', 'hex'), this.writeBuffer, Buffer.alloc(4, 'FFFFFFFF', 'hex')], this.bufferLength)
   
   rpio.spiBegin()
   rpio.spiSetClockDivider(clockDivider)
