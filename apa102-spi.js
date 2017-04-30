@@ -6,10 +6,10 @@ rpio.init({
 
 function Apa102spi (stringLength, clockDivider) {
   clockDivider = typeof clockDivider !== 'undefined' ? clockDivider : 200
-  this.bufferLength = stringLength * 4 + 8
-  this.writeBuffer = new Buffer(this.bufferLength)
-  this.writeBuffer.fill(Apa102spi.START)
-  this.writeBuffer[this.bufferLength - 1] = Apa102spi.END
+  this.bufferLength = stringLength * 4
+  this.writeBuffer = Buffer.alloc(this.bufferLength, 'E0000000', 'hex')
+  this.bufferLength += 8
+  
   rpio.spiBegin()
   rpio.spiSetClockDivider(clockDivider)
 }
@@ -26,8 +26,5 @@ Apa102spi.prototype.setLedColor = function (n, brightness, r, g, b) {
   this.writeBuffer[n + 2] = g
   this.writeBuffer[n + 3] = r
 }
-
-Apa102spi.START = 0x00
-Apa102spi.END = 0xFF
 
 module.exports = Apa102spi
