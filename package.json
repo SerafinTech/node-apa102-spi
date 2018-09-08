@@ -1,6 +1,6 @@
 {
   "name": "apa102-spi",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Raspberry Pi library to drive APA102 RGB led over SPI",
   "main": "apa102-spi.js",
   "scripts": {
