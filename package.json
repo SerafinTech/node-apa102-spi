@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/SerafinTech/node-apa102-spi#readme",
   "dependencies": {
-    "rpio": "0.9.22"
+    "rpio": ">1.2.0"
   }
 }
